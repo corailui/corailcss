@@ -1,0 +1,19 @@
+{
+  "name": "unicornui",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "sass": "^1.59.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0",
+    "vite-plugin-copy": "^0.1.6",
+    "vite-plugin-static-copy": "^0.13.1"
+  }
+}
