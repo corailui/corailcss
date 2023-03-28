@@ -2,7 +2,8 @@ name: publish
 
 on:
   push:
-    branches: "master"
+    branches:
+      - "master"
 
 jobs:
   build:
@@ -18,14 +19,15 @@ jobs:
       - name: Install dependencies
         run: pnpm ci
       - name: Build project
-        run: pnpm run build -if-present
+        run: pnpm run build --if-present
       - name: Archive production artifact
         uses: actions/upload-artifact@v3
         with:
           name: artifacts-production
           path: dist
 
-   publish:
+  publish:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,11 +38,10 @@ jobs:
           node-version: lts/*
           cache: "npm"
       - name: Download production artifact
-          uses: actions/download-artifact@v3
-            with:
-              name: artifacts-production
+        uses: actions/download-artifact@v3
+        with:
+          name: artifacts-production
       - name: Publish to npm
         run: pnpm publish --access public
-          env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
