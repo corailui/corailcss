@@ -6,7 +6,7 @@ const config: UserConfigExport = defineConfig({
     emptyOutDir: true,
     minify: false,
     rollupOptions: {
-      input: "src/unicornui.scss",
+      input: "src/corail.scss",
       output: [
         {
           assetFileNames: "[name].[ext]",
@@ -17,7 +17,7 @@ const config: UserConfigExport = defineConfig({
   plugins: [
     viteStaticCopy({
       targets: [
-        { src: "src/unicornui.scss", dest: "" },
+        { src: "src/corail.scss", dest: "" },
         { src: "src/lib/**", dest: "lib" },
       ],
     }),
