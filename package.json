@@ -1,7 +1,7 @@
 {
-  "name": "unicornui",
+  "name": "@unicornkit/unicornui",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,11 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/node": "^18.15.3",
-    "sass": "^1.59.3",
-    "typescript": "^4.9.3",
-    "vite": "^4.2.0",
-    "vite-plugin-copy": "^0.1.6",
+    "@types/node": "^18.15.10",
+    "sass": "^1.60.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.2.1",
     "vite-plugin-static-copy": "^0.13.1"
   }
 }

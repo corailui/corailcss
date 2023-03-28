@@ -1,20 +1,15 @@
-import { defineConfig } from "vite"
+import { defineConfig, UserConfigExport } from "vite"
 import { viteStaticCopy } from "vite-plugin-static-copy"
 
-export default defineConfig({
+const config: UserConfigExport = defineConfig({
   build: {
-    outDir: "dist",
     emptyOutDir: true,
-    sourcemap: false,
     minify: false,
     rollupOptions: {
       input: "src/unicornui.scss",
       output: [
         {
           assetFileNames: "[name].[ext]",
-        },
-        {
-          assetFileNames: "[name].min.[ext]",
         },
       ],
     },
@@ -28,3 +23,5 @@ export default defineConfig({
     }),
   ],
 })
+
+export default config
