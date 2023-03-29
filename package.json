@@ -3,6 +3,16 @@
   "private": false,
   "version": "0.0.2",
   "type": "module",
+  "repository": {
+    "type": " git",
+    "url": "https://github.com/corailui/corailcss.git"
+  },
+  "keywords": [
+    "grid",
+    "responsive",
+    "flex",
+    "css utility"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
