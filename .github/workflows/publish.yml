@@ -48,7 +48,7 @@ jobs:
         with:
           name: artifacts-production
       - name: Check artifacts
-        run: ls
+        run: ls 
       # - name: Publish to npm
       #   run: npm publish
       #   env:
