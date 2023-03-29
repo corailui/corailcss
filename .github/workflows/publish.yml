@@ -43,7 +43,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: artifacts-production
-      - name: Publish to npm
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Check artifacts
+        run: ls
+      # - name: Publish to npm
+      #   run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
